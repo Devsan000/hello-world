@@ -22,11 +22,20 @@
   </modules>
 
   <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>pro-snapshots</id>
+      <name>pro-snapshots</name>
+      <url>http://ec2-13-59-212-219.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/pro-snapshots/</url>
+      <layout>default</layout>
+    </snapshotRepository>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>pro-releases</id>
+      <name>pro-releases</name>
+      <url>http://ec2-13-59-212-219.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/pro-releases/</url>
+      <layout>legacy</layout>
+    </repository>
   </distributionManagement>
 
   <build>
